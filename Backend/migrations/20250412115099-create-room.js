@@ -1,34 +1,28 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Payments', {
+    return queryInterface.createTable('Rooms', {
       id: {
         type: Sequelize.INTEGER,
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
       },
-      tenantId: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        references: {
-          model: 'Tenants',
-          key: 'id',
-        },
-        onUpdate: 'CASCADE',
-        onDelete: 'CASCADE',
-      },
-      amount: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-      },
-      date: {
-        type: Sequelize.DATE,
-        allowNull: false,
-      },
-      method: {
+      number: {
         type: Sequelize.STRING,
-        allowNull: true,
+        allowNull: false,
+      },
+      type: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      price: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+      },
+      status: {
+        type: Sequelize.STRING,
+        defaultValue: 'Available',
       },
       notes: {
         type: Sequelize.TEXT,
@@ -45,6 +39,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Payments');
+    return queryInterface.dropTable('Rooms');
   },
 };
