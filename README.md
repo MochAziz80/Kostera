@@ -45,3 +45,35 @@ Edit file **config/config.json** sesuai kredensial MariaDB kamu:
 npx sequelize-cli db:migrate
 npx sequelize-cli db:seed:all
 ```
+
+---
+
+
+## ✅ Fitur Utama
+- CRUD Penyewa (Tenant)
+- CRUD Kamar Kost (Room)
+- Status Sewa (Active, Late, Done)
+- Riwayat & Status Pembayaran
+- UI Modern berbasis React
+- API RESTful siap integrasi
+
+---
+
+## 📌 Roadmap Pengembangan
+- Login & Autentikasi (Admin)
+- Dashboard Ringkasan Kost
+- Reminder Otomatis untuk Pembayaran
+- Export Laporan ke Excel / PDF
+- Mobile-Friendly UI
+
+---
+
+## 🤝 Kontribusi
+Pull Request sangat diterima!
+Silakan fork dan buat versi kost-mu sendiri. Jangan lupa kasih ⭐ kalau suka 😄
+
+---
+
+## 📄 Lisensi
+Proyek ini menggunakan MIT License
+© 2025 MochAziz80
